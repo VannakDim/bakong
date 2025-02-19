@@ -14,8 +14,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 
     {{-- Bakong KHQR --}}
-    <script src="{{asset('js/khqr-1.0.6.min.js')}}">
-    </script>
+    <script src="{{ asset('js/khqr-1.0.6.min.js') }}"></script>
 
     {{-- QR Code Reader --}}
     <script src="https://cdn.jsdelivr.net/npm/qrcode/build/qrcode.min.js"></script>
@@ -1223,46 +1222,55 @@
 
 
     <div class="container mt-5">
-        <div class="max-w-sm rounded overflow-hidden shadow-lg">
-            <img src="https://bakong.nbc.gov.kh/images/logo.svg" alt="Sample Image" width="200" />
+        <div class="max-w-sm rounded overflow-hidden shadow-lg" style="background: rgba(255, 0, 0, 0.571);padding: 50px;">
+            <img src="https://bakong.nbc.gov.kh/en/images/logo.svg" alt="Sample Image" width="200" />
             <div class="px-6 py-4">
+                
                 <div class="font-bold text-xl mb-2">BAKONG KHQR WITH LARAVEL</div>
                 <p class="text-gray-700 text-base">
-                    This is a sample card description. You can add more details about the content here.
+                    នេះជាឧទាហរណ៍មួយក្នុងការប្រើប្រាស់ BAKONG KHQR ជាមួយនឹង Laravel ដើម្បីបង់ប្រាក់តាមរយៈ QR Code
                 </p>
-                <h2>Enter dynamic amount:</h2>
-                <input name="amount" type="number" id="amount" class="form-control" placeholder="Enter amount" min="0" step="100" value="100" />
-            </div>
-            <div class="px-6 py-4">
-                <div class="btn btn-primary" id="checkout">Checkout<span class="fas fa-arrow-right ps-2"></span>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- QR Code Modal Structure -->
-    <div class="modal fade" id="qrCodeModal" tabindex="-1" aria-labelledby="qrCodeModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="qrCodeModalLabel"><span class="text-primary">ស្កែនដើម្បីបង់ប្រាក់</span></h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-
-                    <!-- Canvas for QR code rendering -->
-                    <div class="d-flex justify-content-center">
-                        <canvas id="qrCodeCanvas"></canvas>
+                    <h2 class="pt-4">Enter dynamic amount:</h2>
+                    <div class="input-group mb-3 pt-2">
+                        <span class="input-group-text">៛</span>
+                        <input name="amount" type="number" id="amount" class="form-control"
+                            placeholder="Enter amount" min="0" step="100" value="100" />
                     </div>
 
+                    <div>
+                        <div class="btn btn-primary" id="checkout">Checkout<span
+                                class="fas fa-arrow-right ps-2"></span>
+                        </div>
+                    </div>
+                
+            </div>
 
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <!-- QR Code Modal Structure -->
+            <div class="modal fade" id="qrCodeModal" tabindex="-1" aria-labelledby="qrCodeModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="qrCodeModalLabel"><span
+                                    class="text-primary">ស្កែនដើម្បីបង់ប្រាក់</span></h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+
+                            <!-- Canvas for QR code rendering -->
+                            <div class="d-flex justify-content-center">
+                                <canvas id="qrCodeCanvas"></canvas>
+                            </div>
+
+
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
-    </div>
 
 
 </body>
