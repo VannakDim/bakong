@@ -15,6 +15,8 @@ return [
 
     'name' => env('APP_NAME', 'Laravel'),
 
+    'bakong_api_token' => env('BAKONG_API_TOKEN'),
+
     /*
     |--------------------------------------------------------------------------
     | Application Environment

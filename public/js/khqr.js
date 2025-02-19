@@ -48,7 +48,7 @@ let displayQRCode = () => {
 };
 
 function fetchTransactionStatus(md5) {
-    const token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7ImlkIjoiOWNmMzU2ZDJmMTBlNDIyZSJ9LCJpYXQiOjE3Mzk4NjA4NjcsImV4cCI6MTc0NzYzNjg2N30.Gsf_UaXMhOPgTOtgb3yOSIvShMgbt8CGQp6omtIG9_A"; // Replace with your actual token
+    const token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7ImlkIjoiOWNmMzU2ZDJmMTBlNDIyZSJ9LCJpYXQiOjE3Mzk4NjA4NjcsImV4cCI6MTc0NzYzNjg2N30.Gsf_UaXMhOPgTOtgb3yOSIvShMgbt8CGQp6omtIG9_A";
     const url = "https://api-bakong.nbc.gov.kh/v1/check_transaction_by_md5";
     const data = {
         md5: md5
@@ -88,6 +88,7 @@ document.getElementById('qrCodeModal').addEventListener('hidden.bs.modal', funct
 });
 
 function start_khqr_scan() {
+    
     if (md5Value) {
         let elapsedTime = 0;
         checkInterval = setInterval(() => {

@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <title>BAKONG KHQR</title>
+    <link rel="icon" href="https://api-bakong.nbc.gov.kh/img/ic_bakong_logo_red.f4bd4b94.png" type="image/x-icon">
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.bunny.net">
