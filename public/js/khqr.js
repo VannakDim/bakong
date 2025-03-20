@@ -87,6 +87,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 
+
     function start_khqr_scan() {
 
         if (md5Value) {
@@ -107,6 +108,7 @@ document.addEventListener("DOMContentLoaded", function () {
     // Attach event listeners for the Checkout button
     const checkoutButton = document.getElementById("checkout");
     if (checkoutButton) {
+        // alert(optionalData.amount);
         checkoutButton.addEventListener("click", displayQRCode);
     }
 
@@ -114,8 +116,8 @@ document.addEventListener("DOMContentLoaded", function () {
     const amountInput = document.getElementById("amount");
     if (amountInput) {
         amountInput.addEventListener("input", function () {
-            amount = this.value;
-            optionalData.amount = amount;
+            // amount = this.value;
+            optionalData.amount = this.value;
             individualInfo = new info("vannak_dim@cadi", "VANNAK DIM", "PHNOM PENH", optionalData);
             khqrInstance = new KHQR.BakongKHQR();
             individual = khqrInstance.generateIndividual(individualInfo);
@@ -124,7 +126,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     // Attach event listeners for all buttons with class 'btn'
-    document.querySelectorAll('.btn').forEach(button => {
+    document.querySelectorAll('.purchase-btn').forEach(button => {
         button.addEventListener('click', function () {
             let price = this.getAttribute('data-price');
             optionalData.amount = price;

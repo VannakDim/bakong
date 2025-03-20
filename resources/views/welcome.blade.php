@@ -84,17 +84,6 @@
                 {{-- @endforeach --}}
             </div>
 
-            {{-- <script>
-                $(document).ready(function() {
-                    $('.purchase-btn').click(function() {
-                        var productId = $(this).data('id');
-                        var productPrice = $(this).data('price');
-                        $('#amount').val(productPrice);
-                        $('#checkout').click();
-                    });
-                });
-            </script> --}}
-
             <!-- QR Code Modal Structure -->
             <div class="modal fade" id="qrCodeModal" tabindex="-1" aria-labelledby="qrCodeModalLabel"
                 aria-hidden="true">
